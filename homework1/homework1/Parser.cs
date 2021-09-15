@@ -3,16 +3,16 @@ namespace homework1
 { 
     public static class Parser
         {
-            public static Exception ParseNumberFail = new Exception("Value is not integer");
+            public static Exception ParserNumberFail = new Exception("Value is not integer");
 
-            public static Exception ParseOperationFail = new Exception("Operation is not correct");
+            public static Exception ParserOperationFail = new Exception("Operation is not correct");
 
             public static int ToParseNumber(string value)
             {
                 var success = int.TryParse(value, out var result);
                 if (!success)
                 {
-                    throw ParseNumberFail;
+                    throw ParserNumberFail;
                 }
 
                 return result;
@@ -26,7 +26,7 @@ namespace homework1
                     "-" => Calculator.Operation.Minus,
                     "*" => Calculator.Operation.Multiply,
                     "/" => Calculator.Operation.Divide,
-                    _ => throw ParseOperationFail
+                    _ => throw ParserOperationFail
                 };
 
                 return result;
