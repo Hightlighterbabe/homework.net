@@ -56,12 +56,12 @@ namespace CalculatorTest
         [TestMethod]
         public void TestParseNumber()
         {
-            var resultOfParse = Parser.ParseNumber("1");
+            var resultOfParse = Parser.ToParseNumber("1");
             Assert.AreEqual(1, resultOfParse);
 
             try
             {
-                var resultOfParse1 = Parser.ParseNumber("a");
+                var resultOfParse1 = Parser.ToParseNumber("a");
             }
             catch (Exception exception)
             {

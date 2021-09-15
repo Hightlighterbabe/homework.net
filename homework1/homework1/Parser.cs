@@ -7,7 +7,7 @@ namespace homework1
 
             public static Exception ParseOperationFail = new Exception("Operation is not correct");
 
-            public static int ParseNumber(string value)
+            public static int ToParseNumber(string value)
             {
                 var success = int.TryParse(value, out var result);
                 if (!success)
