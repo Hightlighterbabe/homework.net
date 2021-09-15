@@ -26,4 +26,4 @@ jobs:
     - name: LatypovaV
       uses: latypovav/latypovav-action@v2.1.0
       with:
-         file:""
+         file:"./Report.xml"
