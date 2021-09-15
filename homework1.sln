@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework1", "homework1\homework1.csproj", "{3AC4798B-5E5C-4B84-B32F-E880E13999C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework1", "homework1\homework1\homework1.csproj", "{3AC4798B-5E5C-4B84-B32F-E880E13999C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTest", "CalculatorTest\CalculatorTest.csproj", "{E668DAC5-2AD0-4AFD-93EA-2C2A87BF33D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTest", "homework1\CalculatorTest\CalculatorTest.csproj", "{E668DAC5-2AD0-4AFD-93EA-2C2A87BF33D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
