@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
     <File Index="1" Name="E:\Program Files\Github\hw1.net\homework1\CalculatorTest\UnitTest1.cs" ChecksumAlgorithm="SHA256" Checksum="593B4537ED9BC2FCB4D8E5EAA755BF4169EBDE1ADBC7E5C3BB9FE6A02A4F499B" />
@@ -68,7 +67,7 @@
     </Namespace>
   </Assembly>
 =======
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
     <File Index="1" Name="E:\Program Files\Github\hw1.net\homework1\CalculatorTest\UnitTest1.cs" ChecksumAlgorithm="SHA256" Checksum="593B4537ED9BC2FCB4D8E5EAA755BF4169EBDE1ADBC7E5C3BB9FE6A02A4F499B" />
