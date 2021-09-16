@@ -1,4 +1,5 @@
-
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
 <Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
@@ -68,6 +69,7 @@
     </Namespace>
   </Assembly>
 =======
+﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
 <Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
@@ -137,4 +139,5 @@
     </Namespace>
   </Assembly>
 >>>>>>> ca7795e19be4a2fa0b4d36da58ed4ea574c33d4e
+</Root>
 </Root>
