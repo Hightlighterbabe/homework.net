@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<Root CoveredStatements="37" TotalStatements="37" CoveragePercent="100" ReportType="DetailedXml" DotCoverVersion="2021.2.1">
   <FileIndices>
     <File Index="1" Name="E:\Program Files\Github\hw1.net\homework1\CalculatorTest\UnitTest1.cs" ChecksumAlgorithm="SHA256" Checksum="593B4537ED9BC2FCB4D8E5EAA755BF4169EBDE1ADBC7E5C3BB9FE6A02A4F499B" />
     <File Index="2" Name="C:\Users\79191\.nuget\packages\microsoft.net.test.sdk\16.9.4\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" ChecksumAlgorithm="SHA256" Checksum="D66F12F9433816A8C7DC1B2ACB9E1010F5418F5EEB51E80F1DF57AA1DCAB8D8A" />
