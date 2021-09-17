@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SolutionRoot CoveredStatements="91" TotalStatements="95" CoveragePercent="96" ReportType="Xml" DotCoverVersion="2021.2.1">
+  <Project Name="CalculatorTest" CoveredStatements="54" TotalStatements="58" CoveragePercent="93">
+    <Namespace Name="CalculatorTest" CoveredStatements="54" TotalStatements="58" CoveragePercent="93">
+      <Type Name="UnitTest1" CoveredStatements="54" TotalStatements="58" CoveragePercent="93">
+        <Method Name="TestDivide():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="TestDivideByZero():void" CoveredStatements="8" TotalStatements="9" CoveragePercent="89" />
+        <Method Name="TestMinus():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="TestMultiply():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="TestParseNumber():void" CoveredStatements="10" TotalStatements="11" CoveragePercent="91" />
+        <Method Name="TestParseOperation():void" CoveredStatements="16" TotalStatements="17" CoveragePercent="94" />
+        <Method Name="TestSum():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="TestUnknownOperation():void" CoveredStatements="8" TotalStatements="9" CoveragePercent="89" />
+      </Type>
+    </Namespace>
+  </Project>
+  <Project Name="homework1" CoveredStatements="37" TotalStatements="37" CoveragePercent="100">
+    <Namespace Name="homework1" CoveredStatements="37" TotalStatements="37" CoveragePercent="100">
+      <Type Name="Calculator" CoveredStatements="19" TotalStatements="19" CoveragePercent="100">
+        <Constructor Name="Calculator()" CoveredStatements="2" TotalStatements="2" CoveragePercent="100" />
+        <Method Name="Calculate(int,int,Operation):int" CoveredStatements="17" TotalStatements="17" CoveragePercent="100" />
+      </Type>
+      <Type Name="Parser" CoveredStatements="18" TotalStatements="18" CoveragePercent="100">
+        <Constructor Name="Parser()" CoveredStatements="2" TotalStatements="2" CoveragePercent="100" />
+        <Method Name="ParseOperation(string):Calculator.Operation" CoveredStatements="9" TotalStatements="9" CoveragePercent="100" />
+        <Method Name="ToParseNumber(string):int" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+      </Type>
+    </Namespace>
+  </Project>
+</SolutionRoot>
