@@ -6,7 +6,6 @@
 
 .class public abstract sealed auto ansi beforefieldinit
   homework2.Parseril
-    extends [System.Runtime]System.Object
 {
 
   .field public static class [System.Runtime]System.Exception ParserilNumberFail
