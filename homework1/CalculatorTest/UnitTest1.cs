@@ -1,6 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using homework1;
+using static Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace CalculatorTest
 {
@@ -10,25 +11,25 @@ namespace CalculatorTest
         [TestMethod]
         public void TestSum()
         {
-            Assert.AreEqual(2, Calculator.Calculate(1, 1, Calculator.Operation.Plus));
+            AreEqual(2, FSLibrary.Calculator.Calculate(1, 1, FSLibrary.Calculator.Operation.Plus));
         }
         
         [TestMethod]
         public void TestMinus()
         {
-            Assert.AreEqual(1, Calculator.Calculate(3, 2, Calculator.Operation.Minus));
+            AreEqual(1, FSLibrary.Calculator.Calculate(3, 2, FSLibrary.Calculator.Operation.Minus));
         }
 
         [TestMethod]
         public void TestMultiply()
         {
-            Assert.AreEqual(5, Calculator.Calculate(1, 5, Calculator.Operation.Multiply));
+            AreEqual(5, FSLibrary.Calculator.Calculate(1, 5, FSLibrary.Calculator.Operation.Multiply));
         }
 
         [TestMethod]
         public void TestDivide()
         {
-            Assert.AreEqual(5, Calculator.Calculate(25, 5, Calculator.Operation.Divide));
+            AreEqual(5, FSLibrary.Calculator.Calculate(25, 5, FSLibrary.Calculator.Operation.Divide));
         }
 
         [TestMethod]
@@ -36,9 +37,9 @@ namespace CalculatorTest
         {
             try
             {
-                Calculator.Calculate(1, 5, Calculator.Operation.Unknown);
+                FSLibrary.Calculator.Calculate(1, 5, FSLibrary.Calculator.Operation.Unknown);
             } catch (Exception exception) {
-                Assert.AreEqual("Operation is unknown", exception.Message);
+                AreEqual("Operation is unknown", exception.Message);
             }
         }
 
@@ -47,9 +48,9 @@ namespace CalculatorTest
         {
             try
             {
-                Calculator.Calculate(1, 0, Calculator.Operation.Divide);
+                FSLibrary.Calculator.Calculate(1, 0, FSLibrary.Calculator.Operation.Divide);
             } catch (Exception exception) {
-                Assert.AreEqual("Num2 is zero", exception.Message);
+                AreEqual("Num2 is zero", exception.Message);
             }
         }
 
@@ -57,7 +58,7 @@ namespace CalculatorTest
         public void TestParseNumber()
         {
             var resultOfParse = Parser.ToParseNumber("1");
-            Assert.AreEqual(1, resultOfParse);
+            AreEqual(1, resultOfParse);
 
             try
             {
@@ -65,7 +66,7 @@ namespace CalculatorTest
             }
             catch (Exception exception)
             {
-                Assert.AreEqual("Value is not integer", exception.Message);
+                AreEqual("Value is not integer", exception.Message);
             }
         }
 
@@ -73,16 +74,16 @@ namespace CalculatorTest
         public void TestParseOperation()
         {
             var resultOfParse = Parser.ParseOperation("+");
-            Assert.AreEqual(Calculator.Operation.Plus, resultOfParse);
+            AreEqual(Calculator.Operation.Plus, resultOfParse);
             
             var resultOfParse2 = Parser.ParseOperation("-");
-            Assert.AreEqual(Calculator.Operation.Minus, resultOfParse2);
+            AreEqual(Calculator.Operation.Minus, resultOfParse2);
             
             var resultOfParse3 = Parser.ParseOperation("*");
-            Assert.AreEqual(Calculator.Operation.Multiply, resultOfParse3);
+            AreEqual(Calculator.Operation.Multiply, resultOfParse3);
 
             var resultOfParse4 = Parser.ParseOperation("/");
-            Assert.AreEqual(Calculator.Operation.Divide, resultOfParse4);
+            AreEqual(Calculator.Operation.Divide, resultOfParse4);
 
             try
             {
@@ -90,7 +91,7 @@ namespace CalculatorTest
             }
             catch (Exception exception)
             {
-                Assert.AreEqual("Operation is not correct", exception.Message);
+                AreEqual("Operation is not correct", exception.Message);
             }
         }
     }

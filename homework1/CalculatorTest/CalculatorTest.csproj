@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\homework4f\homework4f.fsproj" />
       <ProjectReference Include="..\homework1\homework1.csproj" />
     </ItemGroup>
 
