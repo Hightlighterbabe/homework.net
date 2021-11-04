@@ -1,11 +1,7 @@
 namespace FSLibrary
 
-open System
-
-
 type ResultBuilder(errormessage: string) =
     member b.Zero() = Error errormessage
-    
     member b.Bind(x, f) =
         match x with
         |Ok x -> f x
