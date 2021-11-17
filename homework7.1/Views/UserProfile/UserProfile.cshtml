@@ -1,0 +1,17 @@
+@using homework7._1
+@model homework7._1.Models.UserProfile
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>User Profile</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.MyEditorForModel()
+    <div class="form-group" style="margin-top: 10px;">
+        <input type="Submit" text="Submit query">
+    </div>
+}
