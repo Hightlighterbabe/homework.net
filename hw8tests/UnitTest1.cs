@@ -20,7 +20,7 @@ namespace hm8test
         [InlineData(1, 2, "/", 0.5)]
         public void Calculat(decimal val1, decimal val2, string op, decimal res)
         {
-            var args = clacul.Calculate(new CalcArguments(
+            var args = clacul.Calculate(new CalcArguments
             {
                 Val1 = val1.ToString(),
                 Val2 = val2.ToString(),
