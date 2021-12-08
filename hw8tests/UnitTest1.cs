@@ -4,14 +4,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using homework8;
 using homework8.Controllers;
-using Xunit;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Xunit;
 
-namespace hm8test
+namespace hw8tests
 {
     public class UnitTest1
     {
-        private NewCalculator clacul = new NewCalculator();
+        private NewCalculator calculatorrr = new NewCalculator();
 
         [Theory]
         [InlineData(1, 2, "+", 3)]
@@ -20,7 +20,7 @@ namespace hm8test
         [InlineData(1, 2, "/", 0.5)]
         public void Calculat(decimal val1, decimal val2, string op, decimal res)
         {
-            var args = clacul.Calculate(new CalcArguments(
+            var args = calculatorrr.Calculate(new CalcArguments(
             {
                 Val1 = val1.ToString(),
                 Val2 = val2.ToString(),
@@ -70,7 +70,7 @@ namespace hm8test
             [InlineData(1, 2)]
             [InlineData(3, 2)]
             [InlineData(12.4, 2.6)]
-            public async Task Clac(decimal val1, decimal val2)
+            public async Task Calcul(decimal val1, decimal val2)
             {
                 CheckEquality(await Sum(val1, val2), val1 + val2);
                 CheckEquality(await Minus(val1, val2), val1 - val2);
