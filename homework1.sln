@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework8", "homework8\home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw8tests", "hw8tests\hw8tests.csproj", "{6D4BD492-4259-4E64-BE90-294375D1F71D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet2.10.2021", "dotnet2.10.2021\dotnet2.10.2021.csproj", "{7A5AF53F-8320-4DFF-84F0-11286A93D3AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{6D4BD492-4259-4E64-BE90-294375D1F71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D4BD492-4259-4E64-BE90-294375D1F71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D4BD492-4259-4E64-BE90-294375D1F71D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5AF53F-8320-4DFF-84F0-11286A93D3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5AF53F-8320-4DFF-84F0-11286A93D3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5AF53F-8320-4DFF-84F0-11286A93D3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5AF53F-8320-4DFF-84F0-11286A93D3AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
