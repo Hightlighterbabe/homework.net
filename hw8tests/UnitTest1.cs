@@ -20,7 +20,7 @@ namespace hm8test
         [InlineData(1, 2, "/", 0.5)]
         public void Calculat(decimal val1, decimal val2, string op, decimal res)
         {
-            var args = clacul.Calculate(new CalcArguments(
+            var args = clacul.Calculate(new CalcArguments
             {
                 Val1 = val1.ToString(),
                 Val2 = val2.ToString(),
@@ -43,7 +43,7 @@ namespace hm8test
 
             private async Task<decimal> Action(decimal val1, decimal val2, string operation)
             {
-                var response = await client.GetAsync($"http://localhost:5000/calc?val1={val1}&val2={val2}&op={operation}");
+                var response = await client.GetAsync($"http://localhost:5000/calculate?val1={val1}&val2={val2}&Operation={operation}");
 
                 var strNumber = await response.Content.ReadAsStringAsync();
                 decimal parsed;
@@ -59,10 +59,10 @@ namespace hm8test
                 return parsed;
             }
 
-            private async Task<decimal> Sum(decimal val1, decimal val2) => await Action(val1, val2, "plus");
-            private async Task<decimal> Minus(decimal val1, decimal val2) => await Action(val1, val2, "minus");
-            private async Task<decimal> Multiply(decimal val1, decimal val2) => await Action(val1, val2, "mult");
-            private async Task<decimal> Divided(decimal val1, decimal val2) => await Action(val1, val2, "div");
+            private async Task<decimal> Sum(decimal val1, decimal val2) => await Action(val1, val2, "+");
+            private async Task<decimal> Minus(decimal val1, decimal val2) => await Action(val1, val2, "-");
+            private async Task<decimal> Multiply(decimal val1, decimal val2) => await Action(val1, val2, "*");
+            private async Task<decimal> Divided(decimal val1, decimal val2) => await Action(val1, val2, "/");
 
             private static void CheckEquality(decimal val1, decimal val2) => Assert.True(Math.Round(val1 - val2) < 0.0001m);
 
