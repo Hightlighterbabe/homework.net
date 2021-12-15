@@ -4,20 +4,25 @@ using System.Threading.Tasks;
 
 namespace hw9.Models
 {
-    public class SlowExecutor : ExpressionVisitor
+    public class SlowExecutor 
     {
-        protected override Expression VisitBinary(BinaryExpression node)
+        public Expression StartVisiting(Expression expression)
+        {
+            return Visit((dynamic) expression);
+        }
+
+        protected virtual Expression Visit(BinaryExpression node)
         {
             Task.Delay(1000).Wait();
             var leftResult = Task.Run(
                 () => (ConstantExpression) (
                     node.Left is BinaryExpression leftBinary
-                        ? VisitBinary(leftBinary)
+                        ? Visit(leftBinary)
                         : node.Left));
             var rightResult = Task.Run(
                 () => (ConstantExpression) (
                     node.Right is BinaryExpression rightBinary
-                        ? VisitBinary(rightBinary)
+                        ? Visit(rightBinary)
                         : node.Right));
             Task.WaitAll(leftResult, rightResult);
             Console.WriteLine($"{leftResult.Result} {node.Method} {rightResult.Result}");
@@ -26,10 +31,10 @@ namespace hw9.Models
             return Expression.Constant(res);
         }
 
-        protected override Expression VisitUnary(UnaryExpression node)
+        protected virtual Expression Visit(UnaryExpression node)
         {
             var nodeResult = (node.Operand is BinaryExpression binary
-                    ? VisitBinary(binary)
+                    ? Visit(binary)
                     : node.Operand)
                 as ConstantExpression;
             return Expression.Constant(node.Method?.Invoke(default, new[] {nodeResult?.Value}));

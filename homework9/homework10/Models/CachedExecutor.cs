@@ -12,18 +12,18 @@ namespace hw9.Models
 
         public CachedExecutor(CacheExpressions cache) =>
             _cache = cache;
-
-        protected override Expression VisitBinary(BinaryExpression node)
+        
+        protected override Expression Visit(BinaryExpression node)
         {
             var leftResult = Task.Run(
                 () => (ConstantExpression) (
                     node.Left is BinaryExpression leftBinary
-                        ? VisitBinary(leftBinary)
+                        ? Visit(leftBinary)
                         : node.Left));
             var rightResult = Task.Run(
                 () => (ConstantExpression) (
                     node.Right is BinaryExpression rightBinary
-                        ? VisitBinary(rightBinary)
+                        ? Visit(rightBinary)
                         : node.Right));
             Task.WaitAll(leftResult, rightResult);
 
