@@ -1,6 +1,6 @@
 namespace hw9.Models
 {
-    internal enum Operation : byte
+    public enum Operation : byte
     {
         Plus,
         Minus,

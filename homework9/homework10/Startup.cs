@@ -1,3 +1,4 @@
+using hw9.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -13,8 +14,14 @@ namespace hw9
 
         public IConfiguration Configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services) =>
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddSingleton<IExpressionCalculator, ExpressionCalculator>();
+            services.AddSingleton<CacheExpressions>();
+            services.AddSingleton<SlowExecutor>();
+            
             services.AddControllersWithViews();
+        }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) =>
             (env.IsDevelopment()
