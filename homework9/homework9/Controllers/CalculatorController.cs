@@ -10,11 +10,6 @@ namespace hw9.Controllers
 {
     public class CalculatorController : Controller
     {
-        /// <summary>
-        /// пробел считается за '+', поэтому пробелы запрещены
-        /// </summary>
-        /// <param name="expressionString"></param>
-        /// <returns></returns>
         [HttpGet, Route("calculate")]
         public IActionResult Calculate(string expressionString)
         {
