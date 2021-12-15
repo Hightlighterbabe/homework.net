@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using hw9.Models;
+using Microsoft.Extensions.Logging;
 
 namespace hw9.Controllers
 {
@@ -13,6 +14,7 @@ namespace hw9.Controllers
         public IActionResult Calculate(
             [FromServices] SlowExecutor slowExecutor,
             [FromServices] IExpressionCalculator expressionCalculator,
+            [FromServices] ExceptionHandler exceptionHandler,
             string expressionString)
         {
             string AddPluses(string str) =>
@@ -27,11 +29,19 @@ namespace hw9.Controllers
             Console.WriteLine();
             Console.WriteLine($"получено выражение:\n\t{expressionString}");
 
-            var expression = expressionCalculator.FromString(expressionString);
-            var res1 = expressionCalculator.ExecuteSlowly(slowExecutor, expression);
-            Console.WriteLine(
-                $"вывод результата через ExpressionCalculator:\n\t{res1?.ToString(CultureInfo.InvariantCulture) ?? "ошибка"}");
-            return Ok(res1?.ToString(CultureInfo.InvariantCulture) ?? "ошибка");
+            try
+            {
+                var expression = expressionCalculator.FromString(expressionString);
+                var res1 = expressionCalculator.ExecuteSlowly(slowExecutor, expression);
+                Console.WriteLine(
+                    $"вывод результата через ExpressionCalculator:\n\t{res1?.ToString(CultureInfo.InvariantCulture) ?? "ошибка"}");
+                return Ok(res1?.ToString(CultureInfo.InvariantCulture) ?? "ошибка");
+            }
+            catch(Exception e)
+            {
+                exceptionHandler.DoHandle(LogLevel.Error, e);
+                return BadRequest();
+            }
         }
     }
 }

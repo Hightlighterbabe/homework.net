@@ -19,6 +19,7 @@ namespace hw9
             services.AddSingleton<IExpressionCalculator, ExpressionCalculator>();
             services.AddSingleton<CacheExpressions>();
             services.AddSingleton<SlowExecutor>();
+            services.AddSingleton<ExceptionHandler>();
             
             services.AddControllersWithViews();
         }
