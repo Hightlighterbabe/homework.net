@@ -6,8 +6,6 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using hw9.Models;
 
-// ReSharper disable StringLiteralTypo
-
 namespace hw9.Controllers
 {
     public class CalculatorController : Controller
