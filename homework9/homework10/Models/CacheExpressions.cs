@@ -31,6 +31,7 @@ namespace hw9.Models
                 lock (_context)
                 {
                     _context.Items.Add(expWithoutRes);
+                    _context.SaveChanges();
                 }
                 return expWithoutRes;
             }

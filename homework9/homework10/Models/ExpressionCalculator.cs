@@ -52,8 +52,6 @@ namespace hw9.Models
             Expression.MakeUnary(ExpressionType.Negate, e, default);
 
         public decimal? ExecuteSlowly(SlowExecutor slowExecutor ,Expression expression) =>
-            (slowExecutor.Visit(expression) as ConstantExpression)?.Value as decimal?;
-
-        
+            (slowExecutor.StartVisiting(expression) as ConstantExpression)?.Value as decimal?;
     }
 }
